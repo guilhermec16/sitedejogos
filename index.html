@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam de probri</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Steam de probri</h1>
+        <nav>
+            <a href="#inicio">inicio</a> |
+            <a href="#jogos">jogos</a> |
+            <a href="#promocoes">promoções</a> |
+            <a href="#contato">contato</a>
+        </nav>
+    </header>
+
+    <div class="container" id="inicio">
+
+        <div class="destaque">
+            <h2>★ JOGO DO ANO ★</h2>
+            <img src="deluxe.jpg" alt="Super Quadrado 3D">
+            <h3>Super kuadrado 3D Deluxe</h3>
+            <p>O jogo onde vc pula com um kuadrado</p>
+            <div class="preco">R$ 19,99</div>
+            <button class="butao-comprar" onclick="comprar('Super kuadrado 3D Deluxe')">COMPRAR AGORA</button>
+        </div>
+
+        <div class="pesquisa-box">
+            <label for="inputPesquisa">Pesquisar jogo: </label>
+            <input type="text" id="inputPesquisa" onkeyup="filtrarJogos()" placeholder="Digite o nome do jogo...">
+        </div>
+
+        <h2 id="jogos" style="color: #66c0f4; border-bottom: 1px solid #2a475e; padding-bottom: 5px;">Lista de Jogos</h2>
+
+        <div class="jogos-grid" id="listaJogos">
+
+            <div class="cartao-jogo">
+                <img src="monstro.jpg" alt="Jogo 1">
+                <h3>Super Monstro</h3>
+                <p>Um jogo onde vc tem que fugir de um mosntro que deseja te comer</p>
+                <div class="preco">R$ 19,99</div>
+                <button class="butao-comprar" onclick="comprar('Super Monstro')">Comprar</button>
+            </div>
+
+            <div class="cartao-jogo">
+                <img src="jogo2.jpg" alt="Jogo 2">
+                <h3>Corrida de carrus</h3>
+                <p>Corra com os carro ai.</p>
+                <div class="preco">R$ 12,50</div>
+                <button class="butao-comprar" onclick="comprar('Corrida de Carrinho')">Comprar</button>
+            </div>
+
+            <div class="cartao-jogo">
+                <img src="macacos.jpg" alt="Jogo 3">
+                <h3>Macaco de combate</h3>
+                <p>macacos lutando.</p>
+                <div class="preco">GRÁTIS</div>
+                <button class="butao-comprar" onclick="comprar('Macaco de combate')">Baixar</button>
+            </div>
+
+            <div class="cartao-jogo">
+                <img src="jogo3.jpg" alt="Jogo 4">
+                <h3>Minecraft da Shopee</h3>
+                <p>Construa blocos muito divertidos neste jogo kuadrado</p>
+                <div class="preco">R$ 5,00</div>
+                <button class="butao-comprar" onclick="comprar('Minecraft da Shopee')">Comprar</button>
+            </div>
+
+              <div class="cartao-jogo">
+                <img src="morcego.jpg" alt="Jogo 4">
+                <h3>Macaco VS Morcego</h3>
+                <p>Escolha um dos dois lados e batalhe ao lado do seu personage</p>
+                <div class="preco">R$ 5,00</div>
+                <button class="butao-comprar" onclick="comprar('Macaco VS Morcego')">Comprar</button>
+            </div>
+
+        </div>
+
+        <div class="form-box">
+            <h3>Adicionar Novo Jogo no Site</h3>
+            <label>Nome do Jogo:</label>
+            <input type="text" id="novoNome" placeholder="Ex: Jogo de macacos">
+
+            <label>Preço:</label>
+            <input type="text" id="novoPreco" placeholder="Ex: 10,00 ou GRÁTIS">
+
+            <label>Descrição curta:</label>
+            <textarea id="novaDescricao" rows="2" placeholder="Ex: Jogo que joga com macacos"></textarea>
+            <button class="butao-add" onclick="adicionarJogo()">+ Adicionar Jogo na Tela</button>
+        </div>
+
+    </div>
+
+    <footer id="contato">
+        <p>Steam de probri - Criado pelo aluno que estava jogando.</p>
+        <p><strong>Melhor site de jogos do senai.</strong></p>
+    </footer>
+
+</body>
+
+</html>
